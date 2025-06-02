@@ -1,5 +1,4 @@
-package Entities;
-
+import Entities.*;
 import Entities.DAOs.EmpresaDAO;
 import Entities.DAOs.SucursalDAO;
 import Entities.Enums.Estado;

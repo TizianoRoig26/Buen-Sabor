@@ -63,7 +63,6 @@ public class EmpresaDAO {
             try (ResultSet rs = ps.getGeneratedKeys()) {
                 if (rs.next()) {
                     idGenerado = rs.getLong(1);
-                    empresa.setId(idGenerado); // Opcional: guardar el ID en el objeto
                 }
             }
         }
