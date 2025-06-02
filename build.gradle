@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application' // si planeas ejecutar un main
+}
+
+group = 'com.tuproyecto'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8 // o la que estés usando
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // Solo estos dos para Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+}
+
+application {
+    // Cambia esto si tienes una clase principal con main()
+    mainClass = 'Entities.Main'
+
+}
