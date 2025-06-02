@@ -1,6 +1,6 @@
 package Entities;
 
-import Entities.Enums.TipoPromocion;
+import Enums.TipoPromocion;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

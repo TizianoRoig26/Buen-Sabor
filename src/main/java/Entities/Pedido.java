@@ -1,8 +1,8 @@
 package Entities;
 
-import Entities.Enums.Estado;
-import Entities.Enums.FormaPago;
-import Entities.Enums.TipoEnvio;
+import Enums.Estado;
+import Enums.FormaPago;
+import Enums.TipoEnvio;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 

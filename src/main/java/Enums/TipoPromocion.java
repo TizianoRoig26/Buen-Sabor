@@ -1,4 +1,4 @@
-package Entities.Enums;
+package Enums;
 
 public enum TipoPromocion {
     HAPPY_HOUR,

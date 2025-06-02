@@ -1,10 +1,10 @@
 import Entities.*;
 import Entities.DAOs.EmpresaDAO;
 import Entities.DAOs.SucursalDAO;
-import Entities.Enums.Estado;
-import Entities.Enums.FormaPago;
-import Entities.Enums.TipoEnvio;
-import Entities.Enums.TipoPromocion;
+import Enums.Estado;
+import Enums.FormaPago;
+import Enums.TipoEnvio;
+import Enums.TipoPromocion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
