@@ -4,6 +4,8 @@ Proyecto realizado en Java para gestionar las operaciones principales de la empr
 Integrantes:
 
 Tiziano Roig
+
 Gabriel Rodriguez
+
 Tomas Montenegro
 
