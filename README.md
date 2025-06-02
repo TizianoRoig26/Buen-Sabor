@@ -2,7 +2,8 @@
 Proyecto realizado en Java para gestionar las operaciones principales de la empresa Buen Sabor.
 
 Integrantes:
-Tiziano Roig
 
-Chat GPT
+Tiziano Roig
+Gabriel Rodriguez
+Tomas Montenegro
 
