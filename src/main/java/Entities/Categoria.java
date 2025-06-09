@@ -21,6 +21,13 @@ public class Categoria extends Base {
     private Set<Categoria> categoriasHijas = new HashSet<>();
     @Builder.Default
     private Set<Articulo> articulos = new HashSet<>();
-    @Builder.Default
-    private Set<Sucursal> sucursales = new HashSet<>();
+
+    public void agregarArticulo(Articulo articulo) {
+        this.articulos.add(articulo);
+    }
+    public void agregarCategoriaHija(Categoria categoria) {
+        categoria.setCategoriaPadre(this);
+        this.categoriasHijas.add(categoria);
+    }
+
 }

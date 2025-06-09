@@ -48,6 +48,10 @@ public class Main {
                     .numero(123)
                     .localidad(localidad)
                     .build();
+            pais.agregarProvincia(provincia);
+            provincia.agregarLocalidad(localidad);
+            localidad.agregarDomicilio(domicilio);
+
 
             Sucursal sucursal1 = Sucursal.builder()
                     .nombre("Sucursal Mendoza Centro")
@@ -70,6 +74,7 @@ public class Main {
                     .denominacion("Panificados")
                     .build();
 
+
             ArticuloInsumo insumo = ArticuloInsumo.builder()
                     .denominacion("Harina 000")
                     .precioVenta(150)
@@ -78,41 +83,31 @@ public class Main {
                     .stockMaximo(200)
                     .esParaElaborar(true)
                     .unidadMedida(unidad)
-                    .categoria(categoria)
                     .build();
 
             ArticuloManufacturado articulo1 = ArticuloManufacturado.builder()
                     .denominacion("Pan")
                     .precioVenta(200)
-                    .categoria(categoria)
                     .unidadMedida(unidad)
                     .descripcion("Pan")
                     .tiempoEstimadoMinutos(20)
                     .preparacion("Preparar pan")
-                    .categoria(categoria)
                     .build();
             ArticuloManufacturado articulo2 = ArticuloManufacturado.builder()
                     .descripcion("Tortitas")
                     .tiempoEstimadoMinutos(10)
                     .preparacion("Preparar tortitas")
-                    .categoria(categoria)
                     .build();
             ArticuloManufacturado articulo3 = ArticuloManufacturado.builder()
                     .descripcion("facturas")
                     .tiempoEstimadoMinutos(30)
                     .preparacion("Preparar facturas")
-                    .categoria(categoria)
                     .build();
 
-            Set<Articulo> articulosPromo = new HashSet<>();
-            articulosPromo.add(articulo1);
-            articulosPromo.add(articulo2);
-            articulosPromo.add(articulo3);
-
-            Set<Sucursal> listaSucursales = new HashSet<>();
-            listaSucursales.add(sucursal1);
-            listaSucursales.add(sucursal2);
-
+            ArticuloManufacturadoDetalle detalle1 = ArticuloManufacturadoDetalle.builder()
+                    .cantidad(1)
+                    .articuloInsumo(insumo)
+                    .build();
 
             Cliente cliente = Cliente.builder()
                     .id(1)
@@ -139,15 +134,11 @@ public class Main {
                     .descripcionDescuento("Descuento del 10%")
                     .precionPromocinal(100)
                     .tipoPromocion(TipoPromocion.HAPPY_HOUR)
-                    .articulos(articulosPromo)
-                    .sucursales(listaSucursales)
                     .build();
+
 
             Imagen imagen1 = Imagen.builder()
                     .denominacion("imagen")
-                    .promocion(promocion)
-                    .articulo(articulo1)
-                    .cliente(cliente)
                     .build();
 
 
@@ -172,6 +163,40 @@ public class Main {
                     .fechaPedido(LocalDate.now())
                     .pedido(pedido)
                     .build();
+
+
+            DetallePedido detallePedido = DetallePedido.builder()
+                    .cantidad(2)
+                    .articulo(articulo1)
+                    .pedido(pedido)
+                    .build();
+
+            promocion.agregarArticulo(articulo1);
+            promocion.agregarArticulo(articulo2);
+            promocion.agregarSucursal(sucursal1);
+
+            promocion.agregarSucursal(sucursal1);
+            promocion.agregarSucursal(sucursal2);
+
+            categoria.agregarArticulo(articulo1);
+            categoria.agregarArticulo(articulo2);
+            categoria.agregarArticulo(articulo3);
+
+            empresa.agregarSucursal(sucursal1);
+
+            promocion.agregarArticulo(articulo1);
+            promocion.agregarArticulo(articulo2);
+            promocion.agregarArticulo(articulo3);
+
+
+            cliente.agregarPedido(pedido);
+            cliente.agregarDomicilio(domicilio);
+
+            pedido.agregarDetalle(detallePedido);
+
+            articulo1.agregarDetalle(detalle1);
+
+
 
             System.out.println(
                     promocion + "\n===========================================================================\n" +

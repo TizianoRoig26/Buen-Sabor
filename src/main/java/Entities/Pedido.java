@@ -28,12 +28,14 @@ public class Pedido extends Base{
     private LocalDate fechaPedido;
     private Cliente cliente;
     private Domicilio domicilio;
-    private Factura factura;
     private Sucursal sucursal;
 
     @Builder.Default
     private List<DetallePedido> detalles = new ArrayList<>();
 
+    public void agregarDetalle(DetallePedido detalle) {
+        this.detalles.add(detalle);
+    }
 
     @Override
     public String toString() {

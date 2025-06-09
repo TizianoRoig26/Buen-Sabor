@@ -31,6 +31,14 @@ public class Promocion extends Base{
     @Builder.Default
     private Set<Imagen> imagenes = new HashSet<>();
 
+    public void agregarArticulo(Articulo articulo) {
+        this.articulos.add(articulo);
+    }
+
+    public void agregarSucursal(Sucursal sucursal) {
+        this.sucursales.add(sucursal);
+    }
+
 
     @Override
     public String toString() {

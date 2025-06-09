@@ -18,4 +18,9 @@ public class Provincia extends Base {
     private Set<Localidad> localidades = new HashSet<>();
     private Pais pais;
 
-   }
+    public void agregarLocalidad(Localidad localidad) {
+        localidad.setProvincia(this);
+        this.localidades.add(localidad);
+    }
+
+}

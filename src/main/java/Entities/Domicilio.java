@@ -17,10 +17,4 @@ public class Domicilio extends Base {
     private Integer numero;
     private Integer cp;
     private Localidad localidad;
-    private Sucursal sucursal;
-    @Builder.Default
-    private Set<Cliente> clientes = new HashSet<>();
-    @Builder.Default
-    private Set<Pedido> pedidos = new HashSet<>();
-
 }

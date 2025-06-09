@@ -17,5 +17,10 @@ public class Pais extends Base {
     @Builder.Default
     private Set<Provincia> provincias = new HashSet<>();
 
+    public void agregarProvincia(Provincia provincia) {
+        provincia.setPais(this);
+        this.provincias.add(provincia);
+    }
+
 
 }

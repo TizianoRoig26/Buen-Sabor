@@ -18,6 +18,10 @@ public class ArticuloManufacturado extends Articulo{
     @Builder.Default
     private Set<ArticuloManufacturadoDetalle> manufacturadoDetalles = new HashSet<>();
 
+    public void agregarDetalle(ArticuloManufacturadoDetalle detalle){
+        manufacturadoDetalles.add(detalle);
+    }
+
     @Override
     public String toString() {
         return "ArticuloManufacturado{" +

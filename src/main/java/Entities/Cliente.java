@@ -25,6 +25,12 @@ public class Cliente extends Base{
     private Imagen imagen;
     private Usuario usuario;
 
+    public void agregarDomicilio(Domicilio domicilio) {
+        domicilios.add(domicilio);
+    }
+    public void agregarPedido(Pedido pedido) {
+        pedidos.add(pedido);
+    }
     @Override
     public String toString() {
         return "Cliente{" +
